@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 
 
-let topics = ["Rugrats","Hey Arnold", "Rocket Power"];
+let topics = ["Rugrats","Hey Arnold", "Rocket Power","Aaahh!!! Real Monsters","Angry Beavers","Rocko's Modern Life", "The Wild Thornberrys", "Ren and Stimpy"];
 
 $("#add_button_box button").click(addButton);
 

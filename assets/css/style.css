@@ -1,31 +1,94 @@
-#button_box {
+h1 {
+	font-family:impact;
+	font-size:70px;
+}f
 
+h3 {
+	font-size:25px;
+}
+body{
+
+}
+
+figure {
+	display:inline-block;
+	margin:10px;
+}
+
+footer {
+	font-family:impact;
+	font-size:20px;
+	text-align:center;
+	/*color:#ec9305;*/
+	background-color:#ec9305;
+	height:30px;
+	padding:20px;
+	margin-top:10px;
+
+}
+#nick {
+	width:350px;
+}
+
+#button_box {
+	
+	background:#ec9305;
+	font-family:impact;
 	width:100%;
 	height:20%;
-	border: 5px solid red;
+	/*border: 5px solid red;*/
+}
+
+#button_box button{
+	width:150px;
+	height:50px;
+	margin:5px;
+	font-size:15px;
+	font-family:veranda;
 }
 
 #gif_box {
-
+	
+	font-family:impact;
 	vertical-align: top;
 	display:inline-block;
 	box-sizing:border-box;
 	width:70%;
 	height:75%;
-	border: 5px solid red;
+	
+	/*border: 5px solid red;*/
 }
 
 #add_button_box {
-
+	
+	text-align:center;
+	font-family:impact;
 	vertical-align: top;
 	display:inline-block;
 	box-sizing:border-box;
+	font-color:#ec9305;
+	font-size:30px;
+	margin-top:10px;
 	width:25%;
 	height:75%;
-	border: 5px solid red;
+	/*border: 5px solid red;*/
 }
 
-figure {
-	display:inline-block;
-	margin:5px;
+#add_button_box button {
+
+	width:300px;
+	height:30px;
+	font-family:impact;
+	/*color:white;*/
+	font-size:20px;
+	background-color:#ec9305;
 }
+
+#search_box {
+
+	width:300px;
+	height:30px;
+	border-width:2px;
+	border-color:#ec9305;
+}
+
