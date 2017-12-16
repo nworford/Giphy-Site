@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Employee Tracker</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+    <!-- Moment.js Reference -->
+    <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <style>
+      .panel-body a {
+        word-break: break-all;
+      }
+
+      .jumbotron {
+        background-color: #377BB5;
+        color: white;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center">Employee Data Management</h1>
+        <h3 class="text-center">A Comprehensive Directory of Employee Billable Hours</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><strong>Current Employees</strong></h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-hover" id='employee-table'>
+                <thead>
+                  <tr>
+                    <th>Employee Name</th>
+                    <th>Role</th>
+                    <th>Start Date</th>
+                    <th>Months Worked</th>
+                    <th>Monthly Rate ($)</th>
+                    <th>Total Billed ($)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Add Employee  -->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><strong>Add Employee</strong></h3>
+            </div>
+            <div class="panel-body">
+
+              <form>
+                <div class="form-group">
+                  <label for="employee-name-input">Employee Name</label>
+                  <input class="form-control" id="employee-name-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="role-input">Role</label>
+                  <input class="form-control" id="role-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="start-input">Start Date (DD/MM/YY - ex: 01/01/89)</label>
+                  <input class="form-control" id="start-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="rate-input">Monthly Rate</label>
+                  <input class="form-control" id="rate-input" type="text">
+                </div>
+                <button class="btn btn-primary" id="add-employee-btn" type="submit">Submit</button>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="something.js"></script>
+
+  </body>
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+
+var config = {
+    apiKey: "AIzaSyCXsIdnd1ZMI1Sa6mcnrUES8VI8MPuQ-60",
+    authDomain: "employee-dat.firebaseapp.com",
+    databaseURL: "https://employee-dat.firebaseio.com",
+    projectId: "employee-dat",
+    storageBucket: "",
+    messagingSenderId: "985427366751"
+  };
+  firebase.initializeApp(config);
+</script>

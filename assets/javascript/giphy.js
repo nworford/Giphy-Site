@@ -7,7 +7,11 @@ let topics = ["Rugrats","Hey Arnold", "Rocket Power","Aaahh!!! Real Monsters","A
 
 $("#add_button_box button").click(addButton);
 
-
+$("#search_box").keyup(function(e){
+	if(e.keyCode===13){
+		addButton();
+	}
+});
 
  getButtons();
 function getButtons(){
@@ -28,8 +32,13 @@ function getButtons(){
 
 function addButton(){
 	let searchstr=$("#add_button_box input").val();
-
 	$("#add_button_box input").val("");
+	$("#add_button_box input").focus();
+	if(!searchstr || searchstr=== "") {
+		$("#add_button_box h3").text("Please add text!");
+		return;
+	}
+	$("#add_button_box h3").text("Add a show!");
 	topics.push(searchstr);
 	getButtons();
 	getGIFS(searchstr);
