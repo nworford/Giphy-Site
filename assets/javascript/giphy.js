@@ -47,7 +47,7 @@ function addButton(){
 
 function getGIFS(searchfor){
 
-	var xhr = $.get("http://api.giphy.com/v1/gifs/search?limit=10&rating=g&q="+searchfor+"&api_key=ykq9N5w7JwsevYTd3IjKuJBHJrD3ONRD");
+	var xhr = $.get("https://api.giphy.com/v1/gifs/search?limit=10&rating=g&q="+searchfor+"&api_key=ykq9N5w7JwsevYTd3IjKuJBHJrD3ONRD");
 	xhr.done(displayGIFS) ;
 
 };
