@@ -7,7 +7,11 @@ h3 {
 	font-size:25px;
 }
 body{
+	height:100%;
+}
 
+.container {
+	height:100%;
 }
 
 figure {
@@ -24,6 +28,7 @@ footer {
 	height:30px;
 	padding:20px;
 	margin-top:10px;
+	vertical-align:bottom;
 
 }
 #nick {
@@ -51,15 +56,27 @@ footer {
 #gif_box {
 	
 	font-family:impact;
+	text-align:center;
 	vertical-align: top;
 	display:inline-block;
 	box-sizing:border-box;
 	width:70%;
-	height:75%;
+	height:100%;
 	
 	/*border: 5px solid red;*/
 }
 
+#intro {
+	font-family:impact;
+	font-size:30px;
+	vertical-align: top;
+	display:inline-block;
+	box-sizing:border-box;
+	height:400px;
+	margin-top:50px;
+	padding: 50px;
+
+}
 #add_button_box {
 	
 	text-align:center;
