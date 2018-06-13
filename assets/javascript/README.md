@@ -33,18 +33,25 @@ TECH USED: HTML, CSS, JavaScript, JQuery, APIs, AJAX
 
 HIGHLIGHT CODE:
 
-…
+function displayGIFS(data) {
+	console.log(data);
+	var html = "";
+	
+	for(let i = 0; i < data.data.length;i++) {
+		html+="<figure><figcaption>rating: "+ data.data[i].rating + "</figcaption>";
+		html += "<img src='" + data.data[i].images.fixed_height_still.url + "' data-src='" + 					data.data[i].images.fixed_height.url + "'> ";
+		html+= "</figure>";
 
-function getGIFS(searchfor){
+	}
 
-
-
-	var xhr = $.get("https://api.giphy.com/v1/gifs/search?limit=10&rating=g&q="+searchfor+"&api_key=ykq9N5w7JwsevYTd3IjKuJBHJrD3ONRD");
-
-	xhr.done(displayGIFS) ;
-
-
-
+	// document.body.innerHTML= html;
+	$("#gif_box").html(html);
+	$("img").click(function(){
+		var oldsrc = $(this).attr("src");
+		var newsrc = $(this).attr("data-src");
+		$(this).attr("src",newsrc);
+		$(this).attr("data-src",oldsrc);
+	});
 };
 
 
