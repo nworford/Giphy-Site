@@ -33,26 +33,14 @@ TECH USED: HTML, CSS, JavaScript, JQuery, APIs, AJAX
 
 HIGHLIGHT CODE:
 
-function displayGIFS(data) {
-	console.log(data);
-	var html = "";
-	
-	for(let i = 0; i < data.data.length;i++) {
-		html+="<figure><figcaption>rating: "+ data.data[i].rating + "</figcaption>";
-		html += "<img src='" + data.data[i].images.fixed_height_still.url + "' data-src='" + 					data.data[i].images.fixed_height.url + "'> ";
-		html+= "</figure>";
+This snippit uses jQuery to add a click event to images. Once clicked, the static image will display as an animated GIF. Once clicked again, the GIF will switch back to a still image.
 
-	}
-
-	// document.body.innerHTML= html;
-	$("#gif_box").html(html);
-	$("img").click(function(){
+$("img").click(function(){
 		var oldsrc = $(this).attr("src");
 		var newsrc = $(this).attr("data-src");
 		$(this).attr("src",newsrc);
 		$(this).attr("data-src",oldsrc);
 	});
-};
 
 
 CONCLUSION: 
